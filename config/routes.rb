@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/available_products.json", controller: "products", action: "available_method"
+  get "/available_products/:available", controller: "products", action: "available_method"
+  get "/one_product/:id" => "products#one_product_method"
 end

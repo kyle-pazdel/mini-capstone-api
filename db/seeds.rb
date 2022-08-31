@@ -54,7 +54,7 @@ Product.create(
 Product.create(
   name: FFaker::Product.product_name,
   price: 50,
-  image_url: FFaker::Image.urlr::Image.url,
+  image_url: FFaker::Image.url,
   description: FFaker::AWS.product_description,
   availability: true,
 )

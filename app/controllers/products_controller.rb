@@ -9,4 +9,9 @@ class ProductsController < ApplicationController
     end
     render json: available_products.to_json
   end
+
+  def one_product_method
+    product = Product.find_by(id: params["id"])
+    render json: product.to_json
+  end
 end

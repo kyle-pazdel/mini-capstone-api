@@ -5,3 +5,84 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "ffaker"
+
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)
+Product.create(
+  name: FFaker::Product.product_name,
+  price: 50,
+  image_url: "TBD",
+  description: "TBD",
+  availability: true,
+)

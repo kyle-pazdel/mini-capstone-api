@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
+  get "/products" => "products#index"
+  get "/products/:id" => "products#show"
   get "/available_products/:available", controller: "products", action: "available_method"
-  get "/one_product/:id" => "products#one_product_method"
+  post "/products" => "products#create"
+  patch "/products/:id" => "products#update"
+  delete "/products/:id" => "products#destroy"
 end

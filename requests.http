@@ -9,11 +9,11 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  # "name": "test title", 
-  "price": 50,   
-  # "description": "test description",  
-  # "image_url": "test image_url",  
-  # "availability": "test directions"
+  "name": "test title", 
+  "price": "50",   
+  "description": "test description",  
+  "image_url": "test image_url",  
+  "availability": true
   }
 
 ### request update product
@@ -22,9 +22,9 @@ PATCH http://localhost:3000/products/2.json
 Content-Type: application/json
 
 {
-  "price": 8,
+  "price": "8",
 }
 
 ### request delete product
 
-DELETE http://localhost:3000/products/18.json
+DELETE http://localhost:3000/products/25.json

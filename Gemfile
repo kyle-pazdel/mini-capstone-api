@@ -52,3 +52,4 @@ end
 
 gem "rack-cors"
 
+gem 'jb'

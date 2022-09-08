@@ -11,8 +11,9 @@ class ProductsController < ApplicationController
   end
 
   def index
-    products = Product.all
-    render json: products.to_json
+    @products = Product.all
+    pp current_user
+    render template: "products/index"
   end
 
   def show
@@ -24,22 +25,27 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params["name"],
       price: params["price"],
-      image_url: params["image_url"],
       description: params["description"],
       availability: params["availability"],
+      supplier_id: params["supplier_id"],
+      inventory: params["inventory"],
     )
-    @product.save
-    render template: "products/show"
+    if @product.save
+      Image.create(url: params["image_url"], product_id: @product.id)
+      render template: "products/show"
+    else
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def update
     @product = Product.find_by(id: params["id"])
-    product.name = params["name"] || product.name
-    product.price = params["price"] || product.price
-    product.image_url = params["image_url"] || product.image_url
-    product.description = params["description"] || product.description
-    product.availability = params["availability"] || product.availability
-
+    @product.name = params["name"] || @product.name
+    @product.price = params["price"] || @product.price
+    @product.description = params["description"] || @product.description
+    @product.availability = params["availability"] || @product.availability
+    @product.inventory = params["inventory"] || @product.inventory
+    @product.supplier_id = params["supplier_id"] || @product.supplier_id,
     @product.save
     render template: "products/show"
   end

@@ -1,30 +1,81 @@
 ### requests products index
 GET http://localhost:3000/products.json
+Authorization: 
 
 ### requests products show
 GET http://localhost:3000/products/2.json
 
-### requests post product
+### requests create product
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test title", 
-  "price": "50",   
-  "description": "test description",  
-  "image_url": "test image_url",  
+  "name": "Unicorn Blood", 
+  "price": "250",   
+  "image_url": "https://static.wikia.nocookie.net/harrypotter/images/2/26/Unicorn_blood.png/revision/latest?cb=20210418214529",
+  "description": "This is the purest substance in all of the world.",
+  "supplier_id": 2,    
+  "quantity": 0,
   "availability": true
   }
 
 ### request update product
 
-PATCH http://localhost:3000/products/2.json
+PATCH http://localhost:3000/products/20.json
 Content-Type: application/json
 
 {
-  "price": "8",
+  "image_url": "https://www.gastronomblog.com/wp-content/uploads/2020/10/Halloween-Cocktail-Unicorn-Blood-3.jpg"
 }
 
 ### request delete product
 
 DELETE http://localhost:3000/products/25.json
+
+
+
+
+### requests supplier show
+GET http://localhost:3000/supplier/2.json
+
+
+### requests create user
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Kyle",
+  "email": "kyle@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+
+### request session create
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "kyle@test.com",
+  "password": "password"
+}
+
+### orders show request
+GET http://localhost:3000/orders/1.json
+
+### orders index request
+GET http://localhost:3000/orders.json
+
+
+### orders create request
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI3NTE3MjV9.XIpTgBvoJ2Kv_7rRRwViozUtjVbstF5GmU92Zuhkz8U
+Content-Type: application/json
+
+{
+  "product_id": 3,
+  "quantity": 1,
+  "subtotal": 50,
+  "tax": 5.0,
+  "total": 55
+}

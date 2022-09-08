@@ -1,12 +1,21 @@
 Product.create!([
-  {name: "Tag Filter", price: "50.0", image_url: "https://ppolyzos.com/wp-content/uploads/2020/03/chrome-dev-tools-filters-include-exclude-1024x600.jpg", description: "The Product Filter – Tags widget that is part of the WooCommerce Product Search extension provides a live product tag filter for your shop. While your customers choose the desired tag, it finds matching products and shows them on the shop page.", availability: true, inventory: 0},
-  {name: "Performance Case", price: "50.0", image_url: "https://m.media-amazon.com/images/I/91zUa+-t1RL._AC_SS450_.jpg", description: "Studio, cafe, stage, floor, coffee table—the 7U Performance case doesn't care where you play with it. Two 3U rows house and power all the modules you love (or one day hope to love), while the additional 1U row accommodates an extensive selection of specialized utility modules.", availability: true, inventory: 0},
-  {name: "Air Output Bridge", price: "8.0", image_url: "https://www.researchgate.net/profile/Rossano-Lang/publication/232087962/figure/fig2/AS:601719947923461@1520472623318/a-Overview-image-of-the-air-bridge-PC-fully-fabricated-with-FIB-b-central-region-of_Q320.jpg", description: "Ideal for small and medium-sized networks, this Air Output Bridge brings a full slate of Cisco high-performance functionality to the enterprise environment.", availability: true, inventory: 0},
-  {name: "test title", price: "50.0", image_url: "test image_url", description: "test description", availability: true, inventory: 0},
-  {name: "test title", price: "50.0", image_url: "test image_url", description: "test description", availability: true, inventory: 0},
-  {name: "test title", price: "50.0", image_url: "test image_url", description: "test description", availability: true, inventory: 0},
-  {name: "Synthetic Cornea", price: "50000.0", image_url: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsj.eye.6700333/MediaObjects/41433_2003_Article_BF6700333_Fig1_HTML.jpg", description: "A polymer cornea, used in extreme cases, to allow those with corneal vision loss to see. It's very expensive", availability: false, inventory: 0},
-  {name: "Banana Boat", price: "150.0", image_url: "https://media4.giphy.com/media/3o7TKGbnSkK897sA8g/giphy.gif?cid=790b76114c601b275bb774ef38f53759293f30ab80dabeb9&rid=giphy.gif&ct=g", description: "A boat made from actual bananas!", availability: false, inventory: 0},
-  {name: "THE Hope Diamond", price: "25000000.0", image_url: "https://blog.crownandcaliber.com/wp-content/uploads/2015/07/Hope-Diamond-1-1280x720.jpg", description: "You know what this is... You'll probably have to steal it.", availability: false, inventory: 0},
-  {name: "LaDuca Nude T-Strap 3\" Character Heel", price: "5000.0", image_url: "https://cdn.shopify.com/s/files/1/1073/6332/products/Rac25B_B_d276865c-e545-4c1e-98e9-e9c6339abb5d_2048x@2x.jpg?v=1589932372", description: "LaDuca's BABY!", availability: false, inventory: 0}
+  { name: "Tag Filter", price: "50.0", description: "The Product Filter – Tags widget that is part of the WooCommerce Product Search extension provides a live product tag filter for your shop. While your customers choose the desired tag, it finds matching products and shows them on the shop page.", availability: true, inventory: 0, supplier_id: 1 },
+  { name: "Performance Case", price: "50.0", availability: true, inventory: 0, supplier_id: 1 },
+  { name: "Air Output Bridge", price: "8.0", description: "Ideal for small and medium-sized networks, this Air Output Bridge brings a full slate of Cisco high-performance functionality to the enterprise environment.", availability: true, inventory: 0, supplier_id: 2 },
+  { name: "Synthetic Cornea", price: "50000.0", description: "A polymer cornea, used in extreme cases, to allow those with corneal vision loss to see. It's very expensive", availability: false, inventory: 0, supplier_id: 2 },
+  { name: "Banana Boat", price: "150.0", description: "A boat made from actual bananas!", availability: false, inventory: 0, supplier_id: 2 },
+  { name: "THE Hope Diamond", price: "25000000.0", description: "You know what this is... You'll probably have to steal it.", availability: false, inventory: 0, supplier_id: 3 },
+  { name: "LaDuca Nude T-Strap 3 Character Heel", price: "5000.0", description: "LaDuca shoes BABY!", availability: false, inventory: 0, supplier_id: 3 },
 ])
+
+# Supplier.create!([
+#   { name: "United States Government",
+#     email: "gous@test.com",
+#     phone_number: "555-555-5555" },
+#   { name: "The Walt Disney Co",
+#     email: "disneyboss@test.com",
+#     phone_number: "760-555-5432" },
+#   { name: "The Coca-Cola Co",
+#     email: "cokelady@test.com",
+#     phone_number: "800-555-3456" },
+# ])

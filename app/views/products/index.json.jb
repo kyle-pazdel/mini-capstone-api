@@ -1,8 +1,12 @@
 @products.map do |product|
   {
     id: product.id,
-    url: product_url(product, format: :json)
-    id: product.id,
+    name: product.name,
+    price: product.price,
+    description: product.description,
+    inventory: product.inventory,
+    images: product.images,
+    supplier: product.supplier,
     created_at: product.created_at,
     updated_at: product.updated_at,
     is_discounted?: product.is_discounted?,

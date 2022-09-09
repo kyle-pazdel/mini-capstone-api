@@ -8,14 +8,14 @@ Product.create!([
   { name: "LaDuca Nude T-Strap 3 Character Heel", price: "5000.0", description: "LaDuca shoes BABY!", availability: false, inventory: 0, supplier_id: 3 },
 ])
 
-# Supplier.create!([
-#   { name: "United States Government",
-#     email: "gous@test.com",
-#     phone_number: "555-555-5555" },
-#   { name: "The Walt Disney Co",
-#     email: "disneyboss@test.com",
-#     phone_number: "760-555-5432" },
-#   { name: "The Coca-Cola Co",
-#     email: "cokelady@test.com",
-#     phone_number: "800-555-3456" },
-# ])
+Supplier.create!([
+  { name: "United States Government",
+    email: "gous@test.com",
+    phone_number: "555-555-5555" },
+  { name: "The Walt Disney Co",
+    email: "disneyboss@test.com",
+    phone_number: "760-555-5432" },
+  { name: "The Coca-Cola Co",
+    email: "cokelady@test.com",
+    phone_number: "800-555-3456" },
+])

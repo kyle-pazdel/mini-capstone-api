@@ -1,22 +1,26 @@
+@admin_jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjI4NDQwNjl9.MElNxevOIugNe1jYNEk9mJD5AM8oXyR0MwXuUY1YfSQ
+
 ### requests products index
 GET http://localhost:3000/products.json
 Authorization: 
 
 ### requests products show
-GET http://localhost:3000/products/2.json
+GET http://localhost:3000/products/1.json
 
 ### requests create product
 POST http://localhost:3000/products.json
+Authorization: Bearer {{admin_jwt}}
 Content-Type: application/json
 
 {
   "name": "Unicorn Blood", 
   "price": "250",   
-  "image_url": "https://static.wikia.nocookie.net/harrypotter/images/2/26/Unicorn_blood.png/revision/latest?cb=20210418214529",
   "description": "This is the purest substance in all of the world.",
+   "image_url": "https://static.wikia.nocookie.net/harrypotter/images/2/26/Unicorn_blood.png/revision/latest?cb=20210418214529",
   "supplier_id": 2,    
   "quantity": 0,
-  "availability": true
+  "availability": true,
+  "inventory": 2
   }
 
 ### request update product
@@ -44,10 +48,11 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Kyle",
-  "email": "kyle@test.com",
+  "name": "Admin2",
+  "email": "admin2@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "admin": "true"
 }
 
 
@@ -56,26 +61,25 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kyle@test.com",
+  "email": "admin@test.com",
   "password": "password"
 }
 
 ### orders show request
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders/17.json
+Authorization: Bearer {{admin_jwt}}
 
 ### orders index request
 GET http://localhost:3000/orders.json
+Authorization: Bearer {{admin_jwt}}
 
 
 ### orders create request
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjI3NTE3MjV9.XIpTgBvoJ2Kv_7rRRwViozUtjVbstF5GmU92Zuhkz8U
+Authorization: Bearer {{admin_jwt}}
 Content-Type: application/json
 
 {
-  "product_id": 3,
-  "quantity": 1,
-  "subtotal": 50,
-  "tax": 5.0,
-  "total": 55
+  "product_id": 5,
+  "quantity": 1
 }
